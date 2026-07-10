@@ -29,7 +29,7 @@ export const getOriginalUrl = async (req, res) => {
     return res.redirect(originalUrl.longUrl);
   }
 
-  res.status(404).json({
+  return res.status(404).json({
     message: "Invalid Short URL",
   });
 };
