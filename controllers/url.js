@@ -4,7 +4,7 @@ export const shortUrl=async(req,res)=>{
     const longUrl=req.body.longUrl;
     const shortCode=shortid.generate();
 
-    const shortUrl = `http://localhost:1000/${shortCode}`;
+    const shortUrl = process.env.BASE_URL + "/" + shortId;
 
     const newUrl=new url({shortCode,longUrl})
     await newUrl.save();
